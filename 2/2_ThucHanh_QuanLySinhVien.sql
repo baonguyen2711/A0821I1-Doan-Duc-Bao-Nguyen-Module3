@@ -35,23 +35,3 @@ CREATE TABLE Mark
     FOREIGN KEY (SubId) REFERENCES Subject (SubId),
     FOREIGN KEY (StudentId) REFERENCES Student (StudentId)
 );
-SELECT * FROM Student;
-SELECT *FROM Student WHERE Status = true;
-SELECT * FROM Subject WHERE Credit < 10;
-SELECT S.StudentId, S.StudentName, C.ClassName
-FROM Student S join Class C on S.ClassId = C.ClassID;
-SELECT S.StudentId, S.StudentName, C.ClassName
-FROM Student S join Class C on S.ClassId = C.ClassID
-WHERE C.ClassName = 'A1';
-SELECT S.StudentId, S.StudentName, Sub.SubName, M.Mark
-FROM Student S join Mark M on S.StudentId = M.StudentId join Subject Sub on M.SubId = Sub.SubId;
-SELECT S.StudentId, S.StudentName, Sub.SubName, M.Mark
-FROM Student S join Mark M on S.StudentId = M.StudentId join Subject Sub on M.SubId = Sub.SubId
-WHERE Sub.SubName = 'CF';
-SELECT S.StudentName from student S where StudentName like 'h%';
-Select C.ClassID,C.ClassName,C.StartDate from class C where month(StartDate) = 12;
-Select sub.SubID,sub.SubName,sub.Credit from Subject sub where Credit between 3 and 5;
-select * from student;
-update student  set ClassID = 2 where studentname = 'Hung';
-Select S.studentName,sub.subname,m.mark from student s join subject sub on s.StudentId = sub.SubId join mark m on sub.SubId = m.MarkId
-order by Mark desc, StudentName asc;

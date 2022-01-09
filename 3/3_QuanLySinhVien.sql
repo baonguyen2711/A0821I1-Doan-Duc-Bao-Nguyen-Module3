@@ -35,24 +35,38 @@ CREATE TABLE Mark
     FOREIGN KEY (SubId) REFERENCES Subject (SubId),
     FOREIGN KEY (StudentId) REFERENCES Student (StudentId)
 );
-
+-- Hiển thị danh sách tất cả các học viên
 SELECT * FROM Student;
+
+-- Hiển thị danh sách các học viên đang theo học
 SELECT *FROM Student WHERE Status = true;
+
+-- Hiển thị danh sách các môn học có thời gian học nhỏ hơn 10 giờ
 SELECT * FROM Subject WHERE Credit < 10;
-SELECT S.StudentId, S.StudentName, C.ClassName
-FROM Student S join Class C on S.ClassId = C.ClassID;
+
+-- Hiển thị danh sách học viên lớp A1
 SELECT S.StudentId, S.StudentName, C.ClassName
 FROM Student S join Class C on S.ClassId = C.ClassID
 WHERE C.ClassName = 'A1';
-SELECT S.StudentId, S.StudentName, Sub.SubName, M.Mark
-FROM Student S join Mark M on S.StudentId = M.StudentId join Subject Sub on M.SubId = Sub.SubId;
+
+-- Hiển thị điểm môn CF của các học viên
 SELECT S.StudentId, S.StudentName, Sub.SubName, M.Mark
 FROM Student S join Mark M on S.StudentId = M.StudentId join Subject Sub on M.SubId = Sub.SubId
 WHERE Sub.SubName = 'CF';
+
+-- Hiển thị tất cả các sinh viên có tên bắt đầu bảng ký tự ‘h’
 SELECT S.StudentName from student S where StudentName like 'h%';
+
+-- Hiển thị các thông tin lớp học có thời gian bắt đầu vào tháng 12
 Select C.ClassID,C.ClassName,C.StartDate from class C where month(StartDate) = 12;
+
+-- Hiển thị tất cả các thông tin môn học có credit trong khoảng từ 3-5
 Select sub.SubID,sub.SubName,sub.Credit from Subject sub where Credit between 3 and 5;
+
+-- Thay đổi mã lớp(ClassID) của sinh viên có tên ‘Hung’ là 2
 select * from student;
 update student  set ClassID = 2 where studentname = 'Hung';
+
+-- Hiển thị các thông tin: StudentName, SubName, Mark. Dữ liệu sắp xếp theo điểm thi (mark) giảm dần. nếu trùng sắp theo tên tăng dần
 Select S.studentName,sub.subname,m.mark from student s join subject sub on s.StudentId = sub.SubId join mark m on sub.SubId = m.MarkId
 order by Mark desc, StudentName asc;
