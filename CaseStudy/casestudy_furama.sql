@@ -47,7 +47,7 @@ values  ("Nguyễn Văn An","1970-11-07",456231786,10000000,0901234121,"annguyen
 		("Nguyễn Hà Đông","1989-09-03",234414123,9000000,0642123111,"donghanguyen@gmail.com","111 Hùng Vương, Hà Nội",2,4,4),
 		("Tòng Hoang","1982-09-03",256781231,6000000,0245144444,"hoangtong@gmail.com","213 Hàm Nghi, Đà Nẵng",2,4,4),
 		("Nguyễn Công Đạo","1994-01-08",755434343,8000000,0988767111,"nguyencongdao12@gmail.com","6 Hoà Khánh, Đồng Nai",2,3,2);
-  create table loai_khach(
+create table loai_khach(
 id_loai_khach int primary key auto_increment,
 `name_loai_khach` varchar(20)
 );
@@ -324,4 +324,74 @@ join hop_dong_chi_tiet hdct on hdct.id_hop_dong = hd.id_hop_dong
 join dich_vu_di_kem dvdk on dvdk.id_dich_vu_di_kem = hdct.id_dich_vu_di_kem
 where kh.id_loai_khach = 2 and year(hd.ngay_lam_hop_dong) = 2021
 group by kh.id_khach_hang
-having Total > 100
+having Total > 100;
+
+-- 18.	Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
+select kh.id_khach_hang,kh.`name_khach_hang` from khach_hang kh join hop_dong hd on hd.id_khach_hang = kh.id_khach_hang
+where year(ngay_lam_hop_dong) < 2021
+group by kh.id_khach_hang
+order by kh.id_khach_hang;
+
+-- 19.Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
+select dvdk.id_dich_vu_di_kem,dvdk.`name_dich_vu_di_kem`,hdct.so_luong from dich_vu_di_kem dvdk
+join hop_dong_chi_tiet hdct on hdct.id_dich_vu_di_kem = dvdk.id_dich_vu_di_kem
+join hop_dong hd on hd.id_hop_dong = hdct.id_hop_dong
+where year(ngay_lam_hop_dong) = 2020
+group by hdct.id_dich_vu_di_kem
+having hdct.so_luong > 10;
+
+-- 20.Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống, thông tin hiển thị bao gồm
+--    id (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi.
+select `name_nhan_vien`, ngay_sinh_nhan_vien,`email_nhan_vien`,so_dien_thoai_nhan_vien,`dia_chi_nhan_vien`,
+'Nhan_vien' as Phan_loai from nhan_vien
+union
+select `name_khach_hang`,ngay_sinh_khach_hang,`email_khach_hang`,so_dien_thoai_khach_hang,`dia_chi_khach_hang`,
+'Khach_hang' as Phan_loai from khach_hang;
+
+-- 21.Tạo khung nhìn có tên là v_nhan_vien để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Đà Nẵng” 
+--    và đã từng lập hợp đồng cho một hoặc nhiều khách hàng bất kì với ngày lập hợp đồng là “2021”
+create view v_nhan_vien as select nv.id_nhan_vien,nv.`name_nhan_vien`,nv.dia_chi_nhan_vien from nhan_vien nv 
+join hop_dong hd on hd.id_nhan_vien = nv.id_nhan_vien
+where nv.dia_chi_nhan_vien like "%Đà Nẵng" and year(ngay_lam_hop_dong) = '2021'
+group by nv.id_nhan_vien
+having count(hd.id_nhan_vien) >= 1;
+select * from v_nhan_vien;
+
+-- 22.Thông qua khung nhìn v_nhan_vien thực hiện cập nhật địa chỉ thành “Liên Chiểu” đối với tất cả các nhân viên được
+--    nhìn thấy bởi khung nhìn này.
+UPDATE v_nhan_vien v set v.dia_chi_nhan_vien = '44 Yên Bái, Đà Nẵng';
+
+-- 23.Tạo Stored Procedure sp_xoa_khach_hang dùng để xóa thông tin của một khách hàng nào đó với ma_khach_hang được truyền vào
+--    như là 1 tham số của sp_xoa_khach_hang.
+DELIMITER // 
+create procedure sp_xoa_khach_hang ( IN sp_id_khach_hang int)
+begin
+delete from khach_hang where id_khach_hang = sp_id_khach_hang;
+end // 
+DELIMITER ;
+select * from khach_hang;
+SET FOREIGN_KEY_CHECKS=0;
+call sp_xoa_khach_hang (1);
+SET FOREIGN_KEY_CHECKS=1;
+
+-- 24.Tạo Stored Procedure sp_them_moi_hop_dong dùng để thêm mới vào bảng hop_dong với yêu cầu sp_them_moi_hop_dong phải 
+--    thực hiện kiểm tra tính hợp lệ của dữ liệu bổ sung, với nguyên tắc không được trùng khóa chính và đảm bảo toàn vẹn 
+--    tham chiếu đến các bảng liên quan.
+DELIMITER //
+create procedure sp_them_moi_hop_dong (
+in id_hop_dong int,
+in ngay_lam_hop_dong datetime,
+in ngay_ket_thuc datetime,
+in tien_dat_coc double,
+in id_nhan_vien int,
+in id_khach_hang int,
+in id_dich_vu int
+)
+begin
+insert into hop_dong (ngay_lam_hop_dong,ngay_ket_thuc,tien_dat_coc,id_nhan_vien,id_khach_hang,id_dich_vu)
+values (ngay_lam_hop_dong,ngay_ket_thuc,tien_dat_coc,id_nhan_vien,id_khach_hang,id_dich_vu);
+end //
+DELIMITER ;
+select * from hop_dong;
+call sp_them_moi_hop_dong(null,"2022-12-01","2022-12-01",0,3,1,3);
+
