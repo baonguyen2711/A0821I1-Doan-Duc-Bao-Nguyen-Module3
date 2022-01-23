@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo giao diện giản lược của trang chủ Facebook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+        .col-1 {
+            width: 8.33333%;
+        }
+
+        .col-2 {
+            width: 16.66667%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33333%;
+        }
+
+        .col-5 {
+            width: 41.66667%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33333%;
+        }
+
+        .col-8 {
+            width: 66.66667%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33333%;
+        }
+
+        .col-11 {
+            width: 91.66667%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrapper {
+            width: 100%;
+            height: auto;
+        }
+
+        #header {
+            background: #0000ff;
+            height: 50px;
+            width: 100%;
+            display: flex;
+            padding-top: 15px;
+            justify-content: space-between;
+            line-height: 30px;
+        }
+
+        #menu {
+            width: 100%;
+            background: black;
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #left {
+            width: 25%;
+            float: left;
+            height: 100%;
+            position: sticky;
+            top: 0;
+
+        }
+
+        #content {
+            width: 50%;
+            float: left;
+            text-align: justify;
+            height: 100%;
+        }
+
+        #right {
+            width: 25%;
+            float: left;
+            height: 100%;
+            position: sticky;
+            top: 0;
+        }
+
+        #footer {
+            width: 100%;
+            background-color: black;
+            color: white;
+            clear: both;
+            line-height: 30px;
+            text-align: right;
+            position: relative;
+        }
+
+        #header [type=text] {
+            padding: 6px 10px;
+
+        }
+
+        #logo {
+            font-size: 60px;
+            color: white;
+            font-family: Arial, serif;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #info {
+            font-family: Arial, serif;
+            font-size: 20px;
+        }
+
+        #left #content #right {
+            box-sizing: border-box;
+        }
+        #title {
+            font-size: 50px;
+        }
+
+        @media screen and (max-width: 470px) {
+            p {
+                color: red;
+                font-family: Arial, serif;
+            }
+
+            #imgcontent {
+
+                width: 100%;
+                height: 100%;
+            }
+            #header {
+                flex-wrap: wrap;
+                height: auto;
+                padding-bottom: 10px;
+            }
+            #search {
+                padding-top: 15px;
+            }
+            #title {
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (min-width: 471px) and (max-width: 770px) {
+            p {
+                font-family: Arial, serif;
+                color: blue;
+            }
+            #imgcontent {
+
+                width: 100%;
+                height: 100%;
+            }
+            #header {
+                flex-wrap: wrap;
+                height: auto;
+                padding-bottom: 10px;
+            }
+            #search {
+                padding-top: 15px;
+            }
+            #title {
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (min-width: 771px) {
+            p {
+
+                font-family: Arial, serif;
+                color: darkmagenta;
+            }
+        }
+
+        #imgright, #imgleft {
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <a href="https://www.facebook.com/" target="_blank"><p id="logo">facebook</p></a>
+
+        <form id="search" action="https://www.google.com.vn/search" target="_blank">
+            <label>
+                <input type="text" name="q" placeholder="Tìm kiếm"/>
+            </label>
+            <button type="reset" style="padding: 6px 10px;" onclick="submit()">Click</button>
+        </form>
+    </div>
+    <div id="menu">
+        <a href="https://www.youtube.com/" target="_blank"><img
+                src="https://bit.ly/3qLMVxZ" height="50" width="50"/></a>
+        <a href="https://www.tiktok.com/" target="_blank"><img
+                src="https://bit.ly/3GRY8CC" height="60" width="60"/></a>
+        <a href="https://vtvgo.vn/trang-chu.html" target="_blank"><img
+                src="https://bit.ly/3rHCBXb" height="60" width="60"/></a>
+        <a href="https://gamevui.vn/" target="_blank"><img src="https://bit.ly/3nL9AbG" height="60" width="60"/></a>
+    </div>
+    <div id="left">
+        <img src="https://bit.ly/3tJaARz" id="imgleft"/></div>
+    <div id="content">
+        <p id="title" style="color: darkred">Mark Zuckerberg</p>
+        <hr>
+        <br>
+        <img id="imgcontent" src="https://bit.ly/3tMz2Bn" style="float: left;padding: 10px 10px 0 10px " height="194"
+             width="259"/>
+        <p id="info" style="text-indent: 50px;padding: 10px">Mark Elliot Zuckerberg (sinh ngày 14 tháng 5 năm 1984) là
+            một nhà lập
+            trình máy tính người Mỹ kiêm doanh
+            nhân mảng công nghệ Internet. Anh là nhà đồng sáng lập của Meta (ban đầu tên là Facebook), và hiện đang
+            điều hành công ty này với chức danh chủ tịch kiêm giám đốc điều hành.Anh hiện là người giàu thứ 6
+            thế giới với tài sản ròng ước tính là 105 tỷ $ tính đến tháng 11 năm 2020[4]
+
+            Zuckerberg cho ra đời Facebook trong phòng ký túc xá của mình tại Đại học Harvard vào ngày 4 tháng 2 năm
+            2004. Trong quá trình tạo lập, xây dựng và hoàn thiện mạng xã hội này, anh nhận trợ giúp bởi các bạn cùng
+            phòng học và các sinh viên Harvard khác như Eduardo Saverin, Andrew McCollum, Dustin Moskovitz và Chris
+            Hughes.Sau khi thành công trong việc tạo lập và thiết kế, nhóm của anh sau giới thiệu Facebook đến
+            với các trường đại học khác. Từ đó, Facebook đã phát triển nhanh chóng, cán mốc một tỷ người sử dụng vào
+            năm 2012. Cũng vì sự trợ giúp của người khác, Zuckerberg đã vướng phải nhiều tranh chấp tố tụng về pháp
+            lý khác nhau được đưa ra bởi những người khác trong nhóm, họ tuyên bố rằng một phần của công ty vốn dựa
+            trên sự tham gia đóng góp của họ trong giai đoạn khởi đầu và phát triển của Facebook.
+
+            Vào tháng 12 năm 2012, Zuckerberg và vợ là chị Priscilla Chan tuyên bố rằng trong suốt cuộc đời của họ,
+            họ sẽ dành phần lớn tài sản của mình để "phát triển tiềm năng của con người và thúc đẩy bình đẳng" theo
+            tinh thần của Lời cam kết. Vào ngày 1 tháng 12 năm 2015, họ tuyên bố họ sẽ trao 99% cổ phần Facebook của
+            họ (tương đương với 45 tỷ đô la Mỹ vào thời điểm đó) cho Sáng kiến Chan Zuckerberg.
+
+            Từ năm 2010, tạp chí Time đã liệt kê tên Zuckerberg trong số 100 người giàu nhất và có ảnh hưởng nhất trên
+            thế giới như là một phần của giải Nhân vật của năm.Vào tháng 12 năm 2016, Zuckerberg đứng thứ 10 trong danh
+            sách những người có ảnh hưởng nhất Thế giới của tạp chí Forbes.[10]</p>
+        <h2 style="color: red">Chi tiết về Mark Zuckerberg : <a href="https://vi.wikipedia.org/wiki/Mark_Zuckerberg"
+                                                                target="_blank">Click here</a></h2>
+    </div>
+    <div id="right">
+
+        <img src="https://bit.ly/32kN2ap" id="imgright"/></div>
+    <div id="footer">
+        <ul style="padding-right: 20px">
+            <h3>Chi Tiết Liên Hệ</h3>
+            <li>Tên : Đoàn Đức Bảo Nguyên</li>
+            <li>Số điện thoại : 0702770099</li>
+            <li>Emal : baonguyen2711@gmail.com</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

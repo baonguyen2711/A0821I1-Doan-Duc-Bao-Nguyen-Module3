@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phim Mới</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            height: 100vh;
+        }
+
+        #wrapper {
+            width: 100%;
+
+        }
+
+        #header {
+            width: 100%;
+            height: auto;
+            background-color: black;
+            display: flex;
+        }
+
+        #nav {
+            background-color: #3E3535;
+        }
+
+        #nav img {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        #menu {
+            height: 30px;
+            padding: 0;
+            margin: 0;
+            background-color: #000000;
+            border: 1px solid #CDCDCD;
+            font-family: "Fira Code Retina", sans-serif;
+            font-weight: bold;
+        }
+
+        #left {
+            width: 40%;
+            background: dimgray;
+            float: left;
+
+        }
+
+        #right {
+            width: 60%;
+            background-color: dimgray;
+            float: left;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+
+        #footer {
+            width: 100%;
+            height: auto;
+            background: black;
+            color: white;
+            clear: both;
+            position: relative;
+        }
+
+        #header ul {
+            padding-left: 15px;
+            margin: 0;
+        }
+
+        #header li {
+            position: relative;
+            float: left;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header li a {
+            width: 100px;
+            height: 30px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 30px;
+            background-color: black;
+            color: white;
+        }
+
+        #header ul ul li a {
+            width: 200px;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        #header li a:hover {
+            background-color: red;
+        }
+
+        #header ul ul {
+            position: absolute;
+            top: 30px;
+            visibility: hidden;
+        }
+
+        #header ul li:hover ul {
+            visibility: visible;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            background: dimgray;
+        }
+
+        #left_1 {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #left_2 {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #left_3 {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        #right a {
+            width: 150px;
+            text-align: center;
+            background: black;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 25px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        #right a:hover {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <a href="http://localhost:63342/A0821I1-Doan-Duc-Bao-Nguyen-Module3/7-
+    Thi%E1%BA%BFt%20k%E1%BA%BF%20b%E1%BB%91%20c%E1%BB%A5c%20trang%20web/
+    B%C3%A0i%20T%E1%BA%ADp/Ho%E1%BA%A1t%20h%C3%ACnh%20tr%E1%BB%B1c%20tuy%E1%BA%BFn.html
+    ?_ijt=plmhiobismbsdp6fce99ath14j&_ij_reload">
+            <img id="logo" src="https://ephimmoi.net/wp-content/uploads/2021/08/logo.png"></a>
+        <ul style="padding-left: 280px;padding-top: 15px">
+            <li style="font-weight: bold;font-size: 20px;font-family: Calibri,serif"><a href="#">THỂ LOẠI</a>
+                <ul>
+                    <li><a href="https://ephimmoi.net/category/chien-tranh/" target="_blank">Chiến Tranh</a></li>
+                    <li><a href="https://ephimmoi.net/category/hanh-dong/" target="_blank">Hành Động</a></li>
+                    <li><a href="https://ephimmoi.net/category/tam-ly/" target="_blank">Tâm Lý</a></li>
+                    <li><a href="https://ephimmoi.net/category/hoat-hinh/" target="_blank">Hoạt Hình</a></li>
+                    <li><a href="https://ephimmoi.net/category/vien-tuong/" target="_blank">Viễn Tưởng</a></li>
+                    <li><a href="https://ephimmoi.net/category/kinh-di/" target="_blank">Kinh Dị</a></li>
+                </ul>
+            </li>
+            <li style="font-weight: bold;font-size: 20px;font-family: Calibri,serif"><a href="#">QUỐC GIA</a>
+                <ul>
+                    <li><a href="https://ephimmoi.net/country/viet-nam/" target="_blank">Việt Nam</a></li>
+                    <li><a href="https://ephimmoi.net/country/thai-lan/" target="_blank">Thái Lan</a></li>
+                    <li><a href="https://ephimmoi.net/country/my/" target="_blank">Mỹ</a></li>
+                    <li><a href="https://ephimmoi.net/country/han-quoc/" target="_blank">Hàn Quốc</a></li>
+                    <li><a href="https://ephimmoi.net/country/trung-quoc/" target="_blank">Trung Quốc</a></li>
+                    <li><a href="https://ephimmoi.net/country/nhat-ban/" target="_blank">Nhật Bản</a></li>
+                </ul>
+            </li>
+            <li style="font-weight: bold;font-size: 20px;font-family: Calibri,serif"><a href="#">PHIM BỘ</a>
+                <ul>
+                    <li><a href="https://bit.ly/3AkE6ya" target="_blank">Phim Bộ Hồng Kông</a></li>
+                    <li><a href="https://bit.ly/3rHSEE3" target="_blank">Phim Bộ Thái Lan</a></li>
+                    <li><a href="https://bit.ly/35eOqfN" target="_blank">Phim Bộ Mỹ</a></li>
+                    <li><a href="https://bit.ly/3FQ7FJ6" target="_blank">Phim Bộ Hàn Quốc</a></li>
+                    <li><a href="https://bit.ly/3tWzihc" target="_blank">Phim Bộ Trung Quốc</a></li>
+                    <li><a href="https://bit.ly/3GS87bc" target="_blank">Phim Bộ Nhật Bản</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="nav">
+        <img src="https://bit.ly/32nTw8m">
+        <img src="https://i.imgur.com/uOSYv44.gif">
+    </div>
+    <div id="menu">
+
+    </div>
+    <div id="left">
+        <marquee behavior="alternate" width="100%">
+            <h2 style="padding: 10px 0 5px 0;color: yellow">PHIM NỔI BẬT</h2></marquee>
+        <hr>
+        <br>
+        <div id="left_1">
+            <div id="1">
+                <button onclick="display(1)">
+                    <img src="https://bit.ly/3fLCLar">
+                    <h3>MA TRẬN: HỒI SINH</h3>
+                    <p>The Matrix Resurrections (2021)</p>
+                </button>
+            </div>
+            <div id="2">
+                <button onclick="display(2)">
+                    <img src="https://bit.ly/3IjV6Yi">
+                    <h3>NGƯỜI NHỆN: KHÔNG CÒN NHÀ</h3>
+                    <p>Spider-Man: No Way Home (2021)</p>
+                </button>
+            </div>
+        </div>
+        <br>
+        <div id="left_2">
+            <div id="3">
+                <button onclick="display(3)">
+                    <img src="https://bit.ly/35jlF1H">
+                    <h3>VENOM 2: ĐỐI MẶT TỬ THÙ</h3>
+                    <p>Venom: Let There Be Carnage (2021)</p>
+                </button>
+            </div>
+            <div id="4">
+                <button onclick="display(4)">
+                    <img src="https://bit.ly/3nRfpVf">
+                    <h3>SHANG-CHI VÀ HUYỀN THOẠI</h3>
+                    <p style="word-wrap: break-word">Shang-Chi and the Legend</p>
+                </button>
+            </div>
+        </div>
+        <br>
+        <div id="left_3">
+            <div id="5">
+                <button onclick="display(5)">
+                    <img src="https://bit.ly/3FMjEHP" height="340px" width="250px">
+                    <h3>GIẢI CỨU ‘GUY’</h3>
+                    <p>Free Guy (2021)</p>
+                </button>
+            </div>
+            <div id="6">
+                <button onclick="display(6)">
+                    <img src="https://bit.ly/32mxK4P" height="340px" width="250px">
+                    <h3>NHÓC TRÙM: NỐI NGHIỆP</h3>
+                    <p>The Boss Baby: Family Business (2021)</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="right">
+        <h2 style="text-align: center;padding: 3px 0 3px 0;color: white">TRAILER</h2><br>
+        <div id="s0">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/aVKke_3l7R0?autoplay=1&mute=1"
+                    frameborder="0"
+                    allow="accelerometer;autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+        <div id="s1" style="display: none">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zvlWimk2s1o?autoplay=1&mute=1"
+                    frameborder="0"
+                    allow="accelerometer;autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <a href="https://ephimmoi.net/xem-phim/ma-tran-hoi-sinh-tap-1-server-1/" target="_blank">Xem Ngay</a>
+        </div>
+        <div id="s2" style="display: none">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/o4NzWTNqSto?autoplay=1&mute=1"
+                    frameborder="0"
+                    allow="accelerometer;autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <a href="https://ephimmoi.net/xem-phim/nguoi-nhen-khong-con-nha-tap-1-server-1/" target="_blank">Xem
+                Ngay</a>
+        </div>
+        <div id="s3" style="display: none">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/x1bM8nOGEf4?autoplay=1&mute=1"
+                    frameborder="0"
+                    allow="accelerometer;autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <a href="https://ephimmoi.net/xem-phim/venom-2-doi-mat-tu-thu-tap-1-server-1/" target="_blank">Xem Ngay</a>
+        </div>
+        <div id="s4" style="display: none">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vJLsHLx6A60?autoplay=1&mute=1"
+                    frameborder="0"
+                    allow="accelerometer;autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <a href="https://ephimmoi.net/xem-phim/shang-chi-va-huyen-thoai-thap-nhan-tap-1-server-1/" target="_blank">Xem
+                Ngay</a>
+        </div>
+        <div id="s5" style="display: none">
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SM0KiSJnWmM?autoplay=1&mute=1"
+                    frameborder="0"
+                    allow="accelerometer;autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <a href="https://ephimmoi.net/xem-phim/giai-cuu-guy-tap-1-server-1/" target="_blank">Xem Ngay</a>
+        </div>
+        <div id="s6" style="display: none">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/prWBrMJOg2k?autoplay=1&mute=1"
+                    frameborder="0"
+                    allow="accelerometer;autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <a href="https://ephimmoi.net/xem-phim/nhoc-trum-noi-nghiep-gia-dinh-tap-1-server-1/" target="_blank">Xem
+                Ngay</a>
+        </div>
+    </div>
+    <div id="footer">
+        <h2 style="padding:10px 0 10px 20px">Chi tiết liên hệ</h2>
+        <hr>
+        <br>
+        <li>Tên : Đoàn Đức Bảo Nguyên</li>
+        <li>Số điện thoại : 0702770099</li>
+        <li>Emal : baonguyen2711@gmail.com</li>
+    </div>
+</div>
+<script>
+    function display(video) {
+        switch (video) {
+            case 1 :
+                document.getElementById("s0").style.display = "none";
+                document.getElementById("s1").style.display = "block";
+                document.getElementById("s2").style.display = "none";
+                document.getElementById("s3").style.display = "none";
+                document.getElementById("s4").style.display = "none";
+                document.getElementById("s5").style.display = "none";
+                document.getElementById("s6").style.display = "none";
+                break;
+            case 2 :
+                document.getElementById("s0").style.display = "none";
+                document.getElementById("s1").style.display = "none";
+                document.getElementById("s2").style.display = "block";
+                document.getElementById("s3").style.display = "none";
+                document.getElementById("s4").style.display = "none";
+                document.getElementById("s5").style.display = "none";
+                document.getElementById("s6").style.display = "none";
+                break
+            case 3 :
+                document.getElementById("s0").style.display = "none";
+                document.getElementById("s1").style.display = "none";
+                document.getElementById("s2").style.display = "none";
+                document.getElementById("s3").style.display = "block";
+                document.getElementById("s4").style.display = "none";
+                document.getElementById("s5").style.display = "none";
+                document.getElementById("s6").style.display = "none";
+                break;
+            case 4 :
+                document.getElementById("s0").style.display = "none";
+                document.getElementById("s1").style.display = "none";
+                document.getElementById("s2").style.display = "none";
+                document.getElementById("s3").style.display = "none";
+                document.getElementById("s4").style.display = "block";
+                document.getElementById("s5").style.display = "none";
+                document.getElementById("s6").style.display = "none";
+                break;
+            case 5 :
+                document.getElementById("s0").style.display = "none";
+                document.getElementById("s1").style.display = "none";
+                document.getElementById("s2").style.display = "none";
+                document.getElementById("s3").style.display = "none";
+                document.getElementById("s4").style.display = "none";
+                document.getElementById("s5").style.display = "block";
+                document.getElementById("s6").style.display = "none";
+                break;
+            case 6 :
+                document.getElementById("s0").style.display = "none";
+                document.getElementById("s1").style.display = "none";
+                document.getElementById("s2").style.display = "none";
+                document.getElementById("s3").style.display = "none";
+                document.getElementById("s4").style.display = "none";
+                document.getElementById("s5").style.display = "none";
+                document.getElementById("s6").style.display = "block";
+                break;
+        }
+    }
+</script>
+</body>
+</html>
