@@ -12,6 +12,7 @@
 
         html {
             height: 100vh;
+            width: 100vw;
         }
 
         #wrapper {
@@ -24,6 +25,8 @@
             height: auto;
             background-color: black;
             display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         #nav {
@@ -73,7 +76,7 @@
         }
 
         #header ul {
-            padding:0;
+            padding: 0;
             margin: 0;
         }
 
@@ -122,6 +125,11 @@
             background: dimgray;
         }
 
+        #choice {
+            padding-right: 580px;
+            padding-top: 15px;
+        }
+
         #left_1 {
             display: flex;
             justify-content: space-around;
@@ -156,6 +164,80 @@
         #right a:hover {
             background: red;
         }
+
+        @media only screen and (max-width: 500px) {
+            html, body {
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
+            }
+
+            #choice {
+                padding: 0;
+                margin: 0;
+            }
+
+            ul li {
+                font-size: 10px;
+            }
+
+            #left {
+                width: 100%;
+
+            }
+
+            #right {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+
+            }
+
+            #nav img {
+                width: 100%;
+            }
+
+            #left_1 img {
+                width: 100%;
+            }
+
+            #left_2 img {
+                width: 100%;
+            }
+
+            #left_3 img {
+                width: 100%;
+            }
+
+        }
+        @media only screen and (max-width: 768px) {
+            #left_1 {
+                display: block;
+                padding: 10px;
+            }
+            #left_2 {
+                display: block;
+                padding: 10px;
+            }
+            #left_3 {
+                display: block;
+                padding: 10px;
+            }
+            #nav img {
+                width: 100%;
+            }
+            #choice {
+                padding-right: 100px;
+                padding-top: 15px;
+                margin: 0;
+            }
+            #right {
+                position: sticky;
+                top: 0;
+                height: 100vh;
+            }
+        }
     </style>
 </head>
 <body>
@@ -166,38 +248,40 @@
     B%C3%A0i%20T%E1%BA%ADp/Ho%E1%BA%A1t%20h%C3%ACnh%20tr%E1%BB%B1c%20tuy%E1%BA%BFn.html
     ?_ijt=plmhiobismbsdp6fce99ath14j&_ij_reload">
             <img id="logo" src="https://ephimmoi.net/wp-content/uploads/2021/08/logo.png"></a>
-        <ul style="padding-left: 280px;padding-top: 15px">
-            <li style="font-weight: bold;font-size: 20px;font-family: Calibri,serif"><a href="#">THỂ LOẠI</a>
-                <ul>
-                    <li><a href="https://ephimmoi.net/category/chien-tranh/" target="_blank">Chiến Tranh</a></li>
-                    <li><a href="https://ephimmoi.net/category/hanh-dong/" target="_blank">Hành Động</a></li>
-                    <li><a href="https://ephimmoi.net/category/tam-ly/" target="_blank">Tâm Lý</a></li>
-                    <li><a href="https://ephimmoi.net/category/hoat-hinh/" target="_blank">Hoạt Hình</a></li>
-                    <li><a href="https://ephimmoi.net/category/vien-tuong/" target="_blank">Viễn Tưởng</a></li>
-                    <li><a href="https://ephimmoi.net/category/kinh-di/" target="_blank">Kinh Dị</a></li>
-                </ul>
-            </li>
-            <li style="font-weight: bold;font-size: 20px;font-family: Calibri,serif"><a href="#">QUỐC GIA</a>
-                <ul>
-                    <li><a href="https://ephimmoi.net/country/viet-nam/" target="_blank">Việt Nam</a></li>
-                    <li><a href="https://ephimmoi.net/country/thai-lan/" target="_blank">Thái Lan</a></li>
-                    <li><a href="https://ephimmoi.net/country/my/" target="_blank">Mỹ</a></li>
-                    <li><a href="https://ephimmoi.net/country/han-quoc/" target="_blank">Hàn Quốc</a></li>
-                    <li><a href="https://ephimmoi.net/country/trung-quoc/" target="_blank">Trung Quốc</a></li>
-                    <li><a href="https://ephimmoi.net/country/nhat-ban/" target="_blank">Nhật Bản</a></li>
-                </ul>
-            </li>
-            <li style="font-weight: bold;font-size: 20px;font-family: Calibri,serif"><a href="#">PHIM BỘ</a>
-                <ul>
-                    <li><a href="https://bit.ly/3AkE6ya" target="_blank">Phim Bộ Hồng Kông</a></li>
-                    <li><a href="https://bit.ly/3rHSEE3" target="_blank">Phim Bộ Thái Lan</a></li>
-                    <li><a href="https://bit.ly/35eOqfN" target="_blank">Phim Bộ Mỹ</a></li>
-                    <li><a href="https://bit.ly/3FQ7FJ6" target="_blank">Phim Bộ Hàn Quốc</a></li>
-                    <li><a href="https://bit.ly/3tWzihc" target="_blank">Phim Bộ Trung Quốc</a></li>
-                    <li><a href="https://bit.ly/3GS87bc" target="_blank">Phim Bộ Nhật Bản</a></li>
-                </ul>
-            </li>
-        </ul>
+        <div id="choice">
+            <ul>
+                <li style="font-weight: bold;font-family: Calibri,serif"><a href="#">THỂ LOẠI</a>
+                    <ul>
+                        <li><a href="https://ephimmoi.net/category/chien-tranh/" target="_blank">Chiến Tranh</a></li>
+                        <li><a href="https://ephimmoi.net/category/hanh-dong/" target="_blank">Hành Động</a></li>
+                        <li><a href="https://ephimmoi.net/category/tam-ly/" target="_blank">Tâm Lý</a></li>
+                        <li><a href="https://ephimmoi.net/category/hoat-hinh/" target="_blank">Hoạt Hình</a></li>
+                        <li><a href="https://ephimmoi.net/category/vien-tuong/" target="_blank">Viễn Tưởng</a></li>
+                        <li><a href="https://ephimmoi.net/category/kinh-di/" target="_blank">Kinh Dị</a></li>
+                    </ul>
+                </li>
+                <li style="font-weight: bold;font-family: Calibri,serif"><a href="#">QUỐC GIA</a>
+                    <ul>
+                        <li><a href="https://ephimmoi.net/country/viet-nam/" target="_blank">Việt Nam</a></li>
+                        <li><a href="https://ephimmoi.net/country/thai-lan/" target="_blank">Thái Lan</a></li>
+                        <li><a href="https://ephimmoi.net/country/my/" target="_blank">Mỹ</a></li>
+                        <li><a href="https://ephimmoi.net/country/han-quoc/" target="_blank">Hàn Quốc</a></li>
+                        <li><a href="https://ephimmoi.net/country/trung-quoc/" target="_blank">Trung Quốc</a></li>
+                        <li><a href="https://ephimmoi.net/country/nhat-ban/" target="_blank">Nhật Bản</a></li>
+                    </ul>
+                </li>
+                <li style="font-weight: bold;font-family: Calibri,serif"><a href="#">PHIM BỘ</a>
+                    <ul>
+                        <li><a href="https://bit.ly/3AkE6ya" target="_blank">Phim Bộ Hồng Kông</a></li>
+                        <li><a href="https://bit.ly/3rHSEE3" target="_blank">Phim Bộ Thái Lan</a></li>
+                        <li><a href="https://bit.ly/35eOqfN" target="_blank">Phim Bộ Mỹ</a></li>
+                        <li><a href="https://bit.ly/3FQ7FJ6" target="_blank">Phim Bộ Hàn Quốc</a></li>
+                        <li><a href="https://bit.ly/3tWzihc" target="_blank">Phim Bộ Trung Quốc</a></li>
+                        <li><a href="https://bit.ly/3GS87bc" target="_blank">Phim Bộ Nhật Bản</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
     <div id="nav">
         <img src="https://bit.ly/32nTw8m">
@@ -319,6 +403,7 @@
                 Ngay</a>
         </div>
     </div>
+
     <div id="footer">
         <h2 style="padding:10px 0 10px 20px">Chi tiết liên hệ</h2>
         <hr>
