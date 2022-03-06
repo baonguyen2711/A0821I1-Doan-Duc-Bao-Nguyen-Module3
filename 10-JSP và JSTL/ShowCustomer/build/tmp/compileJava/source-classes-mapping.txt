@@ -1,4 +1,22 @@
-codegym/Customer.java
- codegym.Customer
-codegym/CustomerServlet.java
- codegym.CustomerServlet
+codegym/model/repository/CustomerRepository.java
+ codegym.model.repository.CustomerRepository
+codegym/model/bean/CustomerProduct.java
+ codegym.model.bean.CustomerProduct
+codegym/model/service/Impl/ConnectionDB.java
+ codegym.model.service.Impl.ConnectionDB
+codegym/model/service/Impl/CustomerProductServiceImpl.java
+ codegym.model.service.Impl.CustomerProductServiceImpl
+codegym/controller/FilterUTF8.java
+ codegym.controller.FilterUTF8
+codegym/model/repository/CustomerProductRepository.java
+ codegym.model.repository.CustomerProductRepository
+codegym/model/service/Impl/CustomerServiceImpl.java
+ codegym.model.service.Impl.CustomerServiceImpl
+codegym/model/service/CustomerProductService.java
+ codegym.model.service.CustomerProductService
+codegym/model/service/CustomerService.java
+ codegym.model.service.CustomerService
+codegym/controller/CustomerServlet.java
+ codegym.controller.CustomerServlet
+codegym/model/bean/Customer.java
+ codegym.model.bean.Customer

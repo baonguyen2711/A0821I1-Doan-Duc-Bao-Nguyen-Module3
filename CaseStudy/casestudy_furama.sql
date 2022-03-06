@@ -21,6 +21,7 @@ insert into bo_phan (`name_bo_phan`) values ("Sale-Marketing"),("Hành chính"),
 create table nhan_vien(
 id_nhan_vien int primary key auto_increment,
 `name_nhan_vien` varchar(50),
+gioi_tinh boolean,
 ngay_sinh_nhan_vien date,
 so_cmnd int,
 luong double,
@@ -35,6 +36,11 @@ foreign key (id_trinh_do) references trinh_do(id_trinh_do),
 foreign key (id_bo_phan) references bo_phan(id_bo_phan)
 );
 select * from nhan_vien;
+ALTER TABLE nhan_vien 
+   CHANGE gioi_tinh gioi_tinh boolean AFTER `name_nhan_vien`;
+
+delete  from nhan_vien;
+ALTER TABLE nhan_vien add gioi_tinh boolean;
 insert into nhan_vien (`name_nhan_vien`,ngay_sinh_nhan_vien,so_cmnd,luong,so_dien_thoai_nhan_vien,email_nhan_vien,dia_chi_nhan_vien,
 						id_vi_tri,id_trinh_do,id_bo_phan)
 values  ("Nguyễn Văn An","1970-11-07",456231786,10000000,0901234121,"annguyen@gmail.com","295 Nguyễn Tất Thành, Đà Nẵng",1,3,1),
@@ -47,6 +53,7 @@ values  ("Nguyễn Văn An","1970-11-07",456231786,10000000,0901234121,"annguyen
 		("Nguyễn Hà Đông","1989-09-03",234414123,9000000,0642123111,"donghanguyen@gmail.com","111 Hùng Vương, Hà Nội",2,4,4),
 		("Tòng Hoang","1982-09-03",256781231,6000000,0245144444,"hoangtong@gmail.com","213 Hàm Nghi, Đà Nẵng",2,4,4),
 		("Nguyễn Công Đạo","1994-01-08",755434343,8000000,0988767111,"nguyencongdao12@gmail.com","6 Hoà Khánh, Đồng Nai",2,3,2);
+        
 create table loai_khach(
 id_loai_khach int primary key auto_increment,
 `name_loai_khach` varchar(20)

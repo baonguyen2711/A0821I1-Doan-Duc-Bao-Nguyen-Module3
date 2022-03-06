@@ -5,14 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20aea348-db20-4deb-97fe-c778663a8ec5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/A0821I1-Doan-Duc-Bao-Nguyen-Module3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/7-Thiết kế bố cục trang web/Bài Tập/Phim Mới.html" beforeDir="false" afterPath="$PROJECT_DIR$/7-Thiết kế bố cục trang web/Bài Tập/Phim Mới.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/src/main/java/Calculator/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/src/main/java/Calculator/CalculatorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/src/main/webapp/result.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/src/main/java/codegym/controller/FilterUTF8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/src/main/java/codegym/model/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/src/main/java/codegym/model/repository/CustomerRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/src/main/java/codegym/model/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/src/main/java/codegym/model/service/Impl/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/src/main/webapp/view/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/src/main/webapp/view/customer/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/src/main/webapp/view/customer/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/.gradle/6.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/.gradle/6.7/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/.gradle/6.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/.gradle/6.7/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/build/libs/Calculator-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/build/libs/Calculator-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/Calculator/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.gradle/6.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.gradle/6.7/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.gradle/6.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.gradle/6.7/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.gradle/6.7/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.gradle/6.7/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.gradle/6.7/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.gradle/6.7/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/build/classes/java/main/codegym/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/build/classes/java/main/codegym/CustomerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/build/libs/ShowCustomer-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/build/libs/ShowCustomer-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/src/main/java/codegym/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/src/main/java/codegym/model/bean/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/src/main/java/codegym/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/src/main/java/codegym/controller/CustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/src/main/webapp/view/customer/listcustomer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/10-JSP và JSTL/ShowCustomer/src/main/webapp/view/customer/listcustomer.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +66,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../A0821I1-Doan-Duc-Bao-Nguyen-Module1" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -47,6 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1643207439461</updated>
       <workItem from="1643207441288" duration="164000" />
+      <workItem from="1644862141048" duration="24000" />
     </task>
     <servers />
   </component>

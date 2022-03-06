@@ -1,0 +1,81 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Admin
+  Date: 2/3/2022
+  Time: 8:58 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap-4.6.1-dist\css\bootstrap.css">
+</head>
+<body>
+<div class="headers-region" style="text-align: center;font-size:20px;font-weight: bold
+;background-color: #34ce57;color: #0f6674">
+    <c:if test="${mess!=null}">
+        <p>${mess}</p>
+    </c:if>
+</div>
+<h1 style="text-align: center">Customer List</h1>
+<p>
+    <a href="/home">Back to Home</a>
+</p>
+<a href="/home?action=addCustomer" class="btn btn badge-success">Add New Customer</a>
+<form action="/home?action=searchCustomer" method="post" style="float: right">
+    <input type="text" name="customerNameSearch" placeholder="Nhập tên">
+    <input type="text" name="customerEmailSearch" placeholder="Nhập email">
+    <button type="submit">Search</button>
+</form>
+<div>
+    <table class="table table-striped" style="text-align: center">
+        <tr class="bg-dark text-white">
+            <th>#</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Birthday</th>
+            <th>Type Of Customer</th>
+            <th>Code</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+        <c:forEach items="${customerList}" var="customer" varStatus="status1">
+            <tr>
+                <td>${status1.count}</td>
+                <td>${customer.customerId}</td>
+                <td>${customer.customerName}</td>
+                <c:if test="${customer.gender}">
+                    <td>Nam</td>
+                </c:if>
+                <c:if test="${!customer.gender}">
+                    <td>Nữ</td>
+                </c:if>
+                <td>${customer.customerBirthday}</td>
+                <c:forEach items="${typeOfCustomerList}" var="typeOfCustomer">
+                    <c:if test="${typeOfCustomer.typeOfCustomerId==customer.typeOfCustomerId}">
+                        <td> ${typeOfCustomer.typeOfCustomerName}</td>
+                    </c:if>
+                </c:forEach>
+                <td>${customer.customerCode}</td>
+                <td>${customer.customerPhoneNumber}</td>
+                <td>${customer.customerEmail}</td>
+                <td><c:out value="${customer.customerAddress}"></c:out></td>
+
+                <td>
+                    <a href="/home?action=editCustomer&customerId=${customer.customerId}"
+                       class="btn btn badge-primary">Edit</a>
+                    <a href="/home?action=deleteCustomer&customerId=${customer.customerId}"
+                       class="btn btn badge-danger">Delete</a>
+                </td>
+
+            </tr>
+        </c:forEach>
+    </table>
+</div>
+</body>
+</html>
